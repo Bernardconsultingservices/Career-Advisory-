@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bernard Consulting Services | Career Strategy & Placement Suite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-blue: #0a2540;
+            --brand-green: #00d1b2;
+            --light-bg: #f6f9fc;
+            --text-main: #424770;
+            --white: #ffffff;
+            --border-color: #e1e4e8;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Open Sans', sans-serif; color: var(--text-main); line-height: 1.6; background: var(--light-bg); scroll-behavior: smooth; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: var(--brand-blue); }
+
+        /* Navigation */
+        nav {
+            background: var(--white); padding: 1.2rem 10%;
+            display: flex; justify-content: flex-end; align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky; top: 0; z-index: 100;
+        }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--brand-blue); font-weight: 600; font-size: 0.85rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--brand-green); }
+
+        /* Hero styling mirrored directly from source template */
+        .hero {
+            background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover; background-position: center;
+            color: var(--white); padding: 100px 10%; text-align: center;
+        }
+        .hero h1 { color: var(--white); font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; max-width: 850px; margin-left: auto; margin-right: auto; }
+
+        /* Content Structure */
+        .section { padding: 80px 10%; }
+        .container-narrow { max-width: 900px; margin: 0 auto; }
+        
+        /* Cards & Grids */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: #fff; padding: 35px; border-radius: 8px; border: 1px solid #eee; display: flex; flex-direction: column; transition: 0.3s; }
+        .card:hover { border-color: var(--brand-green); transform: translateY(-5px); }
+
+        /* Process Section */
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .process-step { background: var(--white); padding: 30px; border-radius: 8px; border-top: 4px solid var(--brand-green); text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .step-num { font-size: 2rem; font-weight: 700; color: var(--brand-green); display: block; margin-bottom: 10px; }
+
+        /* Footer */
+        footer { background: var(--brand-blue); color: var(--white); padding: 60px 10% 40px; text-align: center; }
+        .footer-links { margin-top: 25px; display: flex; justify-content: center; gap: 25px; }
+        .footer-links button { background: none; border: none; color: rgba(255,255,255,0.6); font-size: 0.85rem; cursor: pointer; text-decoration: underline; transition: 0.3s; }
+        .footer-links button:hover { color: var(--brand-green); }
+
+        /* MODAL SYSTEM */
+        .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); overflow-y: auto; }
+        .modal-content { background-color: var(--white); margin: 40px auto; padding: 40px; border-radius: 12px; width: 90%; max-width: 800px; position: relative; }
+        .close-btn { position: absolute; right: 25px; top: 20px; font-size: 35px; font-weight: bold; cursor: pointer; color: var(--brand-blue); line-height: 1; }
+        .legal-body { max-height: 60vh; overflow-y: scroll; padding-right: 15px; margin-top: 20px; text-align: left; }
+        .legal-body h3 { margin: 20px 0 10px; font-size: 1.1rem; color: var(--brand-blue); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .section { padding: 60px 5%; }
+            .footer-links { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero" style="display: flex; flex-direction: column; align-items: center;">
+    <!-- Logo placed directly at the top of the slogan inside the hero background alignment -->
+    <img src="logo.jpg" alt="Bernard Consulting Services Logo" style="height: 120px; width: auto; margin-bottom: 25px; background: white; padding: 10px; border-radius: 8px;">
+    
+    <h1>Nationwide career advice and placement.</h1>
+    <p>Helping professionals find the right job opportunities and advance their careers. We connect talented individuals directly with hiring companies and provide strategic advice to help you reach your goals quickly and smoothly.</p>
+</section>
+
+<section class="section" id="about">
+    <div class="container-narrow">
+        <h2 style="border-left: 5px solid var(--brand-green); padding-left: 20px; margin-bottom: 20px;">Why Bernard Consulting?</h2>
+        <p>Bernard Consulting Services LLC specializes in <strong>Career Optimization and Talent Architecture</strong>. We look closely at your skills and connect you directly with companies that have open roles matching your long-term goals.</p>
+        
+        <p style="margin-top: 15px;">Many job placement agencies give candidates positions that do not fit their experience or help them grow. We take the time to look at your professional background and build a clear plan for your next career step.</p>
+
+        <p style="margin-top: 15px;">We focus on direct communication with business decision-makers so you can avoid long hiring delays. Our goal is to make your job transition simple, clear, and successful.</p>
+    </div>
+</section>
+
+<section class="section" id="process" style="background: #edf2f7;">
+    <div class="container-narrow">
+        <h2 style="text-align: center; margin-bottom: 10px;">Our Process</h2>
+        <p style="text-align: center; margin-bottom: 40px;">A clear and simple path to your next professional opportunity.</p>
+        <div class="process-grid">
+            <div class="process-step">
+                <span class="step-num">01</span>
+                <h3>Profile Assessment</h3>
+                <p>We review your work experience, technical skills, and salary goals to build a clear profile of your capabilities.</p>
+            </div>
+            <div class="process-step">
+                <span class="step-num">02</span>
+                <h3>Company Matching</h3>
+                <p>We match your profile against active job openings within our professional corporate and business networks.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="services">
+    <h2 style="text-align: center; margin-bottom: 40px;">Our Professional Services</h2>
+    <div class="services-grid">
+        <div class="card">
+            <h3>Job Placement Services</h3>
+            <p>Submit your professional profile directly into our network of active job openings and connect with hiring managers. $20 application fee applies.</p>
+        </div>
+
+        <div class="card">
+            <h3>Resume Optimization</h3>
+            <p>A full review and rewrite of your resume. We adjust your formatting and wording so your experience clearly stands out. $150 fixed suite rate.</p>
+        </div>
+        
+        <div class="card">
+            <h3>Strategic Career Advisory</h3>
+            <p>One-on-one consulting to help you map out your long-term career goals, prepare for interviews, and negotiate salary offers.</p>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="container-narrow">
+        <h2 style="color:var(--white);">Speak with a placement advisor or career consultant</h2>
+        <p style="margin: 15px 0;"><a href="mailto:Bernardconsultingservices@gmail.com" style="color:var(--brand-green); font-size: 1rem; font-weight: 600; text-decoration: none;">Bernardconsultingservices@gmail.com</a></p>
+
+        <div class="footer-links">
+            <button onclick="openLegal('terms')">Terms & Conditions</button>
+            <button onclick="openLegal('privacy')">Privacy Policy</button>
+        </div>
+        <p style="margin-top: 40px; font-size: 0.75rem; opacity: 0.5;">&copy; 2026 Bernard Consulting Services LLC. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<div id="legalModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeLegal()">&times;</span>
+        
+        <div id="termsContent" style="display:none;">
+            <h2>Terms and Conditions</h2>
+            <div class="legal-body">
+                <p>Welcome to Bernard Consulting Services LLC. By accessing our website, you agree to these terms.</p>
+                <h3>1. Services Disclosure</h3>
+                <p>Information on this website does not guarantee employment placement or specific salary outcomes.</p>
+                <h3>2. Intellectual Property</h3>
+                <p>The content, logos, and tools on this site are the property of Bernard Consulting Services LLC.</p>
+                <h3>3. Limitation of Liability</h3>
+                <p>We are not liable for personal career decisions or structural changes made based on the consulting provided on this website.</p>
+                <h3>4. Governing Law</h3>
+                <p>These terms are governed by the laws of the United States. Direct inquiries to Bernardconsultingservices@gmail.com.</p>
+            </div>
+        </div>
+
+        <div id="privacyContent" style="display:none;">
+            <h2>Privacy Policy</h2>
+            <div class="legal-body">
+                <p>Your privacy is vital to us. This policy explains how we handle your data.</p>
+                <h3>1. Data Collection</h3>
+                <p>We collect necessary contact details and work history information submitted through our application forms to process your career requests.</p>
+                <h3>2. Data Protection</h3>
+                <p>We use standard digital security protocols to protect your personal and professional information from unauthorized access.</p>
+                <h3>3. Third-Party Sharing</h3>
+                <p>Your information is shared strictly with partner business networks and hiring managers who are actively looking to fill open positions.</p>
+                <h3>4. Your Rights</h3>
+                <p>You may contact us at any time to request the deletion or correction of your personal information.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openLegal(tab) {
+        const modal = document.getElementById('legalModal');
+        const terms = document.getElementById('termsContent');
+        const privacy = document.getElementById('privacyContent');
+        
+        modal.style.display = 'block';
+        if (tab === 'terms') {
+            terms.style.display = 'block';
+            privacy.style.display = 'none';
+        } else {
+            terms.style.display = 'none';
+            privacy.style.display = 'block';
+        }
+    }
+
+    function closeLegal() {
+        document.getElementById('legalModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('legalModal')) {
+            closeLegal();
+        }
+    }
+</script>
+</body>
+  </html>
+  
