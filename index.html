@@ -29,7 +29,7 @@
         .nav-links a { margin-left: 20px; text-decoration: none; color: var(--brand-blue); font-weight: 600; font-size: 0.85rem; transition: 0.3s; }
         .nav-links a:hover { color: var(--brand-green); }
 
-        /* Hero styling mirrored directly from source template */
+        /* Hero */
         .hero {
             background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80');
             background-size: cover; background-position: center;
@@ -46,6 +46,7 @@
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .card { background: #fff; padding: 35px; border-radius: 8px; border: 1px solid #eee; display: flex; flex-direction: column; transition: 0.3s; }
         .card:hover { border-color: var(--brand-green); transform: translateY(-5px); }
+        .card h3 { margin-bottom: 10px; }
 
         /* Process Section */
         .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
@@ -83,7 +84,6 @@
 </nav>
 
 <section class="hero" style="display: flex; flex-direction: column; align-items: center;">
-    <!-- Logo placed directly at the top of the slogan inside the hero background alignment -->
     <img src="logo.jpg" alt="Bernard Consulting Services Logo" style="height: 120px; width: auto; margin-bottom: 25px; background: white; padding: 10px; border-radius: 8px;">
     
     <h1>Nationwide career advice and placement.</h1>
@@ -125,17 +125,27 @@
     <div class="services-grid">
         <div class="card">
             <h3>Job Placement Services</h3>
-            <p>Submit your professional profile directly into our network of active job openings and connect with hiring managers. $250 application fee applies.</p>
+            <p>Submit your professional profile directly into our network of active job openings and connect with hiring managers. $125 career consultant fee applies.</p>
         </div>
 
         <div class="card">
             <h3>Resume Optimization</h3>
-            <p>A full review and rewrite of your resume. We adjust your formatting and wording so your experience clearly stands out. $150 fixed suite rate.</p>
+            <p>A full review and rewrite of your resume. We adjust your formatting and wording so your experience clearly stands out. $95 fixed suite rate.</p>
         </div>
         
         <div class="card">
             <h3>Strategic Career Advisory</h3>
             <p>One-on-one consulting to help you map out your long-term career goals, prepare for interviews, and negotiate salary offers.</p>
+        </div>
+
+        <div class="card">
+            <h3>Professional Headshots</h3>
+            <p>High-resolution, executive-grade photography session to ensure your LinkedIn profile and corporate portfolio make a lasting first impression. $250 per session.</p>
+        </div>
+
+        <div class="card">
+            <h3>Business Card Design</h3>
+            <p>Custom, high-impact business card design that aligns with your personal brand and professional identity. Includes print-ready files. $150 flat fee.</p>
         </div>
     </div>
 </section>
